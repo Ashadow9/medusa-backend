@@ -1,12 +1,9 @@
-### Step 5: Create ECR Repository
 
 resource "aws_ecr_repository" "medusa" {
   name = "medusa-server"
   image_scanning_configuration { scan_on_push = true }
 }
 
-
-### Step 6: ECS Cluster + Task + Service
 resource "aws_ecs_cluster" "medusa" {
   name = "medusa-cluster"
 }
