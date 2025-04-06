@@ -39,6 +39,7 @@ jobs:
     - name: Register new ECS Task Definition
       run: |
         aws ecs register-task-definition \
+          --region ${{ secrets.AWS_REGION }} \
           --family medusa-task \
           --network-mode awsvpc \
           --container-definitions '[{
